@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Main Page</title>
+    <style>
+      .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+    </style>
+</head>
+
+
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpEJ0tB9KWu2uzc8ClwvUMLoL2CQG33oalhqafBBSK&s" alt="CLIENT" style="width:100%">
+  <h1>SMARTZEN</h1>
+     <thead>
+            <tr>
+                <th>USERNAME</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>MOBILE NUMBER</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee.EmpGender}}</td>
+
+                <td>{{employee.EmpName}}</td>
+
+                <td>{{employee.EmpEmail}}</td>
+                <td>{{employee.EmpDesignation}}</td>
+                <td>{{employee.EmpId}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+  <p class="title">User , EPC</p>
+  <p>KL University</p>
+
+  <p><button>Contact</button></p>
+    <h1>RIGISTERED SUCCESSFULLY</h1>
+</div>

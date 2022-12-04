@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Employee</title>
+</head>
+ <style>
+
+    table {
+        border: 8px outset;
+        border-radius: 10px;
+        border-spacing: 10px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid;
+    }
+
+body {
+  background-image: url('data:image/jpeg;base64,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');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+
+<body>
+
+    <h1 style="text-align:center"> EPC </h1>
+    <h2 style="text-align:center"> User Information </h2>
+    <table align="center" style="margin: 0px auto;">
+        <thead>
+            <tr>
+                <th>USERNAME</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>MOBILE NUMBER</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee.EmpGender}}</td>
+
+                <td>{{employee.EmpName}}</td>
+
+                <td>{{employee.EmpEmail}}</td>
+                <td>{{employee.EmpDesignation}}</td>
+                <td>{{employee.EmpId}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+</body>
+
+</html>
